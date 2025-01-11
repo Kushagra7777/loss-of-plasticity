@@ -21,8 +21,6 @@ for task_idx in range(num_tasks):
     data_permutation = np.random.permutation(examples_per_task)  
     permuted_x, permuted_y = permuted_x[data_permutation], y[data_permutation]
 
-    permuted_x = permuted_x / 255.0 #normalizing
-
     # Saving
     task_filename = f'data/permutated_data/permuted_task_{task_idx + 1}.pkl'  
     with open(task_filename, 'wb') as task_file:
